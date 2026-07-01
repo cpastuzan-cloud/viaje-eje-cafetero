@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Abre esto cuando tengas un momento 🤍</title>
+
+
+<style>
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#d8f3dc, #74c69d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.card {
+
+    background: white;
+    width: 90%;
+    max-width: 620px;
+    padding: 35px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,.25);
+    position: relative;
+
+}
+
+
+h1 {
+    color: #2d6a4f;
+}
+
+
+h2 {
+    color: #40916c;
+}
+
+
+p {
+    color: #444;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+button {
+
+    background: #40916c;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+
+button:hover {
+    transform: scale(1.08);
+}
+
+
+.hidden {
+    display:none;
+}
+
+
+.item {
+
+    background: #f1faee;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 15px;
+
+}
+
+
+.corazon {
+
+    font-size: 45px;
+
+}
+
+
+.heart {
+
+    position: absolute;
+    font-size: 25px;
+    animation: subir 5s linear infinite;
+
+}
+
+
+@keyframes subir {
+
+0% {
+    transform: translateY(100vh);
+    opacity:1;
+}
+
+100% {
+    transform: translateY(-100vh);
+    opacity:0;
+}
+
+}
+
+
+.final {
+
+font-size: 30px;
+color:#2d6a4f;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="card" id="inicio">
+
+
+<div class="corazon">
+💚☕🌿
+</div>
+
+
+<h1>Tengo algo para ti...</h1>
+
+
+<p>
+
+No es cualquier cosa jaja,
+me salió algo bonito y quería enseñártelo 🥹
+
+</p>
+
+
+<button onclick="abrir()">
+
+Abrir sorpresa 🎁
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="card hidden" id="viaje">
+
+
+<h1>Tengo una idea bonita para nosotros 🌿☕</h1>
+
+
+<p>
+
+Me salió una oportunidad muy bonita con la agencia donde siempre viajo,
+y cuando vi el plan pensé:
+
+</p>
+
+
+<p>
+
+"Sería demasiado lindo vivir esto con alguien especial" 🤍
+
+</p>
+
+
+
+<p>
+
+Y la primera persona que se me vino a la cabeza fuiste tú 🥹
+
+</p>
+
+
+
+<p>
+
+Me encantaría conocer un lugar nuevo contigo
+y crear un recuerdo juntos.
+
+</p>
+
+
+
+<p>
+
+Intenté buscar la opción de irnos en avión ✈️
+pero al final creo que lo importante es la aventura y compartirla.
+
+</p>
+
+
+
+
+<h2>🌿 Destino: Eje Cafetero ☕</h2>
+
+
+
+<h2>📅 Fecha: Próximamente ✨</h2>
+
+
+
+<p>
+
+Todavía estoy esperando confirmación,
+pero quería compartirte la idea porque me hace ilusión 💚
+
+</p>
+
+
+
+
+<div class="item">
+☕ Pueblitos cafeteros
+</div>
+
+
+<div class="item">
+🌄 Mirador Encanto
+</div>
+
+
+<div class="item">
+🎢 Parque del Café (entrada sin límite)
+</div>
+
+
+<div class="item">
+⛪ Basílica de Buga
+</div>
+
+
+
+<h2>
+
+Tengo una pregunta...
+
+</h2>
+
+
+
+<p>
+
+¿Te gustaría que esta aventura fuera nuestra? 🥺
+
+</p>
+
+
+
+<p>
+
+Sin presión, solo quería compartirte algo bonito 🤍
+
+</p>
+
+
+
+<button onclick="aceptar()">
+
+SÍ 💚
+
+</button>
+
+
+
+<button onclick="aceptar()">
+
+OBVIO QUE SÍ 😭
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card hidden" id="final">
+
+
+
+<div class="corazon">
+
+🥹💚☕🌿
+
+</div>
+
+
+
+<h1 class="final">
+
+TENEMOS AVENTURA ✨
+
+</h1>
+
+
+
+<p>
+
+Entonces toca esperar la fecha,
+preparar ganas de conocer
+y crear recuerdos juntos 🤍
+
+</p>
+
+
+
+<p>
+
+P.D. La fecha está pendiente,
+pero mi compañía favorita ya está elegida 💚
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+
+
+function abrir(){
+
+document.getElementById("inicio").style.display="none";
+
+document.getElementById("viaje").style.display="block";
+
+}
+
+
+
+
+
+function aceptar(){
+
+
+document.getElementById("viaje").style.display="none";
+
+document.getElementById("final").style.display="block";
+
+
+
+for(let i=0;i<35;i++){
+
+
+let h=document.createElement("div");
+
+
+h.innerHTML="💚";
+
+
+h.className="heart";
+
+
+h.style.left=Math.random()*100+"vw";
+
+
+h.style.animationDuration=(3+Math.random()*3)+"s";
+
+
+document.body.appendChild(h);
+
+
+}
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
